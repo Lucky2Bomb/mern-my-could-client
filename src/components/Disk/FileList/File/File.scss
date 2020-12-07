@@ -1,0 +1,176 @@
+@import "../../../../utils/colors.scss";
+
+.file {
+    height: 60px;
+    padding: 10px 0;
+    border-top: 2px solid $font-color;
+    display: grid;
+    grid-template-columns: 1fr 4fr repeat(4, 1fr);
+
+    &:hover {
+        background-color: darken($background-color, 7);
+    }
+
+    &:last-child {
+        border-bottom: 2px solid $font-color;
+    }
+
+    &__logo {
+        grid-column-start: 1;
+        width: 50px;
+        justify-self: center;
+        align-self: center;
+
+        & img {
+            max-width: 100%;
+            max-height: auto;
+        }
+    }
+
+    &__name {
+        grid-column-start: 2;
+    }
+
+    &__date {
+        grid-column-start: 5;
+    }
+
+    &__size {
+        grid-column-start: 6;
+    }
+
+    &__download, &__delete {
+        display: none;
+    }
+
+    &__icon {
+        max-width: 100%;
+        max-height: 100%;
+        align-self: center;
+
+        &-wrapper {
+            max-width: 20px;
+            max-height: 20px;
+            display: grid;
+            align-self: center;
+        }
+    }
+
+    &__download {
+        grid-column-start: 5;
+    }
+
+    &__delete {
+        grid-column-start: 6;
+    }
+
+    &:hover &__date {
+        grid-column-start: 3;
+    }
+
+    &:hover &__size {
+        grid-column-start: 4;
+    }
+
+    &:hover &__download, &:hover &__delete {
+        display: inline-block;
+        justify-self: center;
+        height: 40px;
+        border: 2px solid $form_button_background-color;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($form_button_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+}
+
+$file-plate-width: 200px;
+$file-plate-heigth: 150px;
+
+.file-plate {
+    width: $file-plate-width;
+    height: $file-plate-heigth;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    // border: 2px solid $background-color;
+    margin: 0 0 10px 0;
+
+    &__logo {
+        grid-column-start: 1;
+        width: 80px;
+        justify-self: center;
+        align-self: center;
+
+        & img {
+            max-width: 100%;
+            max-height: auto;
+        }
+    }
+
+    &__name {
+        box-sizing: border-box;
+        word-break: break-all;
+        padding: 10px;
+    }
+
+    &__download, &__delete {
+        display: none;
+
+        // display: inline-block;
+   
+    }
+
+    &__buttons {
+        position: absolute;
+        flex-direction: column;
+        width: $file-plate-width;
+        height: $file-plate-heigth;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__buttons:hover &__download, &__buttons:hover &__delete {
+        display: inline-block;
+        justify-self: center;
+        height: 40px;
+        border: 2px solid $form_button_background-color;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 16px;
+        width: 60%;
+        opacity: 0.9;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($form_button_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+}

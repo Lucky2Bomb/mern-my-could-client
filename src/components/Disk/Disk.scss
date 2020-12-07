@@ -1,0 +1,109 @@
+.disk-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.disk {
+    width: $laptop-width;
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    &__select {
+        font-size: 16px;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        border: 2px solid $form_button_background-color;
+        margin: 0 10px 0 0;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+    }
+
+    &__create-dir, &__back {
+        border: 2px solid $form_button_background-color;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 16px;
+        margin-right: 10px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($form_button_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+
+    &__upload {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+
+        &-input {
+            display: none;
+        }
+
+        &-label {
+            border: 2px dashed $form_button_background-color;
+            background-color: $background-color;
+            color: $font-color;
+            padding: 9px 16px;
+            font-size: 16px;
+
+            &:focus {
+                outline: none;
+                border: 2px solid darken($form_button_background-color, 30);
+            }
+
+            &:hover {
+                color: #ffffff;
+                background-color: $form_button_background-color;
+            }
+
+            &:active {
+                background-color: darken($form_button_background-color, 10);
+            }
+        }
+    }
+}
+
+.drop-area {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        width: 90vw;
+        height: 90vh;
+        border: 5px dashed #ffffff;
+        font-size: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        color: #ffffff;
+    }
+}

@@ -1,0 +1,118 @@
+@import "../../../utils/colors.scss";
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: grid;
+        background-color: #fff;
+        padding: 15px;
+    }
+
+    &__header {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        padding: 0;
+    }
+
+    &__input {
+        font-size: 16px;
+        width: 400px;
+        border: none;
+        border-bottom: 2px solid #aaaaaa;
+        margin: 5px 0 20px 5px;
+        padding: 5px;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid #ff0000;
+            background-color: #f1f1f1;
+        }
+    }
+
+    &__button-x {
+        border: 2px solid $form_button_background-color;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        padding: 3px 8px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($form_button_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__create {
+        border: 2px solid $form_button_background-color;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 16px;
+        margin: 0 5px 0 0;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($form_button_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+
+    &__close {
+        border: 2px solid $form_button_background-color;
+        background-color: #ffffff;
+        color: $font-color;
+        padding: 8px 16px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            color: #ffffff;
+            background-color: darken($form_button_background-color, 5);
+        }
+
+        &:active {
+            color: #ffffff;
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+}

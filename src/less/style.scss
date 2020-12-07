@@ -1,0 +1,16 @@
+@import "./variables.scss";
+@import "./form-authentication.scss";
+@import "./containerStyle.scss";
+
+@import "../utils/Loader/Loader.scss";
+
+@import "../components/Navbar/Navbar.scss";
+@import "../components/Authorization/Authorization.scss";
+@import "../components/Disk/Disk.scss";
+@import "../components/Disk/FileList/FileList.scss";
+@import "../components/Disk/FileList/File/File.scss";
+@import "../components/Disk/Popup/Popup.scss";
+@import "../components/Disk/Uploader/Uploader.scss";
+@import "../components/Disk/Uploader/UploadFile/UploadFile.scss";
+
+@import "../components/Profile/Profile.scss";

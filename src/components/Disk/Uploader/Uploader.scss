@@ -1,0 +1,45 @@
+.uploader {
+    width: 300px;
+    max-height: 300px;
+    min-height: 200px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    overflow-y: auto;
+    background-color: $font-color;
+    color: #ffffff;
+    padding: 10px;
+
+    &__header {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    &__title {
+        font-size: 16px;
+    }
+
+    &__button-x {
+        border: 2px solid $form_button_background-color;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        padding: 1px 5px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($form_button_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+}

@@ -1,0 +1,121 @@
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    padding: 20px 0 0 0;
+    width: $laptop-width;
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 10px;
+
+    &__avatar-info {
+        display: grid;
+        grid-template-areas: "avatar avatar" "delete upload";
+        gap: 10px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__avatar {
+        grid-area: avatar;
+        border: 2px solid #aaaaaa;
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__upload-label {
+        grid-area: upload;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px dashed $form_button_background-color;
+        background-color: $background-color;
+        color: $font-color;
+        padding: 9px 16px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            color: #ffffff;
+            background-color: $form_button_background-color;
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+
+    &__button {
+        grid-area: delete;
+        border: 2px solid $form_button_background-color;
+        background-color: $form_button_background-color;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($form_button_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($form_button_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($form_button_background-color, 10);
+        }
+    }
+
+    &__input-file {
+        display: none;
+    }
+
+    &__info {
+        // display: grid;
+        // gap: 10px;
+        font-size: 26px;
+    }
+
+    &__fill-bar {
+        margin: 40px 0 0 0;
+        border: 2px solid #aaaaaa;
+        background-color: #fff;
+        height: 40px;
+
+        &_filling {
+            height: 100%;
+
+            // background-color: $font-color;
+            background: repeating-linear-gradient(45deg, $font-color, $font-color 10px, lighten($font-color, 10) 10px, lighten($font-color, 10) 20px);
+            // width: 20%;
+        }
+    }
+
+    &__disk-space {
+        text-align: center;
+    }
+
+    &__email {
+        padding: 0 0 0 10px;
+        border-bottom: 2px solid #aaaaaa;
+    }
+}
