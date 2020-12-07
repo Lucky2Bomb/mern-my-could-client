@@ -1,3 +1,10 @@
+# How to start MongoDB Express.js React.js Node.js remote cloud Client?
+1. Download and unzip all files.
+2. open the console.
+3. using the command "cd" to the folder with the project
+4. write "npm install" (you must have the node js installed)
+5. "npm start"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
